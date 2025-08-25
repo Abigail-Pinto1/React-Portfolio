@@ -1,0 +1,48 @@
+{
+  "testimonials": [
+    {
+      "name": "Sarah Johnson",
+      "role": "Product Manager at TechCorp",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg",
+      "text": "This service exceeded my expectations. The team was responsive, professional, and delivered top-notch results on time!",
+      "id": "1e87"
+    },
+    {
+      "name": "Michael Lee",
+      "role": "Software Engineer at CodeBase",
+      "image": "https://randomuser.me/api/portraits/men/34.jpg",
+      "text": "I was blown away by the quality and speed. The customer support is amazing, and I highly recommend them.",
+      "id": "df77"
+    },
+    {
+      "name": "Emily Davis",
+      "role": "Designer at CreativeX",
+      "image": "https://randomuser.me/api/portraits/women/68.jpg",
+      "text": "They understood our vision perfectly and turned it into reality. I couldn’t be happier with the outcome!",
+      "id": "c262"
+    },
+    {
+      "id": "616e",
+      "testimonials": [
+        {
+          "name": "Sarah Johnson",
+          "role": "Product Manager at TechCorp",
+          "image": "https://randomuser.me/api/portraits/women/44.jpg",
+          "text": "This service exceeded my expectations. The team was responsive, professional, and delivered top-notch results on time!"
+        },
+        {
+          "name": "Michael Lee",
+          "role": "Software Engineer at CodeBase",
+          "image": "https://randomuser.me/api/portraits/men/34.jpg",
+          "text": "I was blown away by the quality and speed. The customer support is amazing, and I highly recommend them."
+        },
+        {
+          "name": "Emily Davis",
+          "role": "Designer at CreativeX",
+          "image": "https://randomuser.me/api/portraits/women/68.jpg",
+          "text": "They understood our vision perfectly and turned it into reality. I couldn’t be happier with the outcome!"
+        }
+      ]
+    }
+  ]
+}

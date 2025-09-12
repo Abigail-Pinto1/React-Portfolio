@@ -1,34 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { Sun, Moon, Gem } from "lucide-react";
+import { useEffect, useState } from "react";
+import { FaRegMoon, FaHeart, FaCrown } from "react-icons/fa";
 
+const themes = [
+  { name: "synthwave", icon: <FaRegMoon size={22} /> },
+  { name: "valentine", icon: <FaHeart size={22} /> },
+  { name: "luxury", icon: <FaCrown size={22} /> },
+];
 
 export default function ThemeSwitcher() {
-  const themes = ["luxury", "dark", "light"];
-
-  // Load theme from localStorage or fallback to "luxury"
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "luxury"
+  const [index, setIndex] = useState(
+    themes.findIndex((t) => t.name === localStorage.getItem("theme")) || 0
   );
+
+  const theme = themes[index].name;
 
   useEffect(() => {
     document.querySelector("html").setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme); // persist choice
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const cycleTheme = () => {
-    const nextIndex = (themes.indexOf(theme) + 1) % themes.length;
-    setTheme(themes[nextIndex]);
+  const handleToggle = () => {
+    setIndex((prev) => (prev + 1) % themes.length);
   };
 
   return (
     <button
-      onClick={cycleTheme}
-      className="btn btn-circle border-2 border-yellow-500 bg-gradient-to-br from-yellow-400 to-yellow-700 text-white shadow-lg hover:scale-110 transition-transform"
+      onClick={handleToggle}
+      className="p-2 rounded-full border bg-base-200 hover:bg-base-300 
+                 shadow-md transition-all duration-300 flex items-center justify-center"
     >
-      {theme === "light" && <Sun size={20} />}
-      {theme === "dark" && <Moon size={20} />}
-      {theme === "luxury" && <Gem size={20} />}
+      {themes[index].icon}
     </button>
   );
 }
- 

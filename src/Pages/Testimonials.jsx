@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
-
-export default function TestimonialsPage() {
+ 
+  function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
   const [current, setCurrent] = useState(0);
 
   // Fetch data from JSON server
   useEffect(() => {
-    axios.get("http://localhost:5000/testimonials")
+    axios.get("http://localhost:3000/testimonials")
       .then((res) => setTestimonials(res.data))
       .catch((err) => console.error("Error fetching testimonials:", err));
   }, []);
+
 
   // Auto-rotate
   useEffect(() => {
@@ -48,9 +49,9 @@ export default function TestimonialsPage() {
                 alt={testimonials[current].name}
                 className="w-20 h-20 mx-auto rounded-full mb-4 object-cover border-4 border-primary"
               />
-              <p className="text-lg italic mb-4">"{testimonials[current].text}"</p>
-              <h4 className="font-semibold text-lg">{testimonials[current].name}</h4>
-              <span className="text-sm text-gray-500">{testimonials[current].role}</span>
+              <p className="text-lg  text-gray-800 mb-4">"{testimonials[current].text}"</p>
+              <h4 className="font-semibold text-blue-800 text-lg">{testimonials[current].name}</h4>
+              <span className="text-sm text-gray-800">{testimonials[current].role}</span>
             </motion.div>
           </AnimatePresence>
         )}
@@ -75,3 +76,6 @@ export default function TestimonialsPage() {
     </section>
   );
 }
+
+
+export default Testimonials

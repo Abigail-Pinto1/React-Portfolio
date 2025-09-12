@@ -1,11 +1,11 @@
 import { Smartphone, Palette, Zap, Compass } from "lucide-react";
-import Background from './Background'
+ 
 
 export default function Specialities() {
   return (
     <>
     
-    <section className="py-16 px-4 items-center justify-center text-center">
+    <section className="py-16 px-1 items-center justify-center text-center">
       <div className="mb-10">
         <h2 className="text-3xl md:text-4xl font-bold">My Specialities</h2>
       </div>

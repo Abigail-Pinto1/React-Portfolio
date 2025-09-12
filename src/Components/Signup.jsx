@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+ 
 import { Eye, EyeOff, Mail, Lock, User, CheckCircle, ArrowRight } from "lucide-react";
 
 
@@ -58,7 +58,7 @@ export default function SignUpPage() {
       // Replace with your API call
       await new Promise((res) => setTimeout(res, 900));
       setMessage({ type: "success", text: "Account created! Redirecting..." });
-    } catch (err) {
+    } catch {
       setMessage({ type: "error", text: "Something went wrong. Please try again." });
     } finally {
       setSubmitting(false);
